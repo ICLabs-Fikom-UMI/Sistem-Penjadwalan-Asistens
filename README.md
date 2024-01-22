@@ -4,3 +4,5 @@ Aplikasi ini saya buat dengan alasan untuk mempermudah Laboran untuk mengatur ja
 
 link  UML: https://drive.google.com/file/d/1WLgpDuiOlObtg3gJsG2NBGttZZLMm-Mw/view?usp=drive_link
 link ERD: https://drive.google.com/file/d/1jYy773DSJpN9NNm4c70AUUcFVBtrYIra/view?usp=drive_link
+
+link UI/UX: https://drive.google.com/drive/folders/1ozHR-iZOEhaMYTKgK_Oh_G9NODaihRoR?usp=drive_link
