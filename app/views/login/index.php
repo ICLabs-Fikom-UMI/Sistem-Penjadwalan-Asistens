@@ -12,7 +12,7 @@
       </div>
       <br />
       <br />
-      <div class="card-form">
+      <div>
         <form action="<?= BASEURL; ?>/Login/login" method="post">
           <input type="text" name="username" class="username" placeholder="Masukkan Username" /><br /><br />
           <input type="password" name="password" class="password" placeholder="Masukkan Password" /><br /><br />

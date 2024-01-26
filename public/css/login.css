@@ -13,6 +13,7 @@
   height: 100vh;
   background-color: #cccccc;
   background-position: center;
+  background-color: black;
 
   font-family: "Poppins", sans-serif;
 }
@@ -29,7 +30,7 @@
 }
 
 .login-body {
-  background-color: #ebe8e8;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -45,7 +46,7 @@
 
 .login-body form .username {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 30px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -71,6 +72,7 @@
 
 .login-body form .submit {
   background-color: #f1f1f1;
+  /* background-color: #8f5858; */
   color: black;
   font-size: 16px;
   padding: 16px 30px;
@@ -78,7 +80,7 @@
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  /* margin-left: 25%; */
+  margin-left: 25%;
   margin-top: 50px;
 }
 

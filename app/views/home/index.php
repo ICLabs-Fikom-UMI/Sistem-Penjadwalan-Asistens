@@ -12,7 +12,7 @@
       <li><a href="">Form Jadwal Kosong</a></li>
       <li><a href="">profil</a></li>
       <li><a href="">jadwal asisten</a></li>
-      <li><a href="">logout</a></li>
+      <li><a href="<?= BASEURL?>/login/logout">logout</a></li>
     </ul>
   </nav>
 </header>

@@ -1,6 +1,14 @@
 <?php
+
+session_start();
 class login extends Controller {
     public function index() {
+        $this->view('template/header');
+        var_dump($_SESSION);
+        
+        if (isset($_SESSION['username']))
+            header("location:" . BASEURL );
+
         $this->view('template/header');
         $this->view('login/index');
         
@@ -16,6 +24,7 @@ class login extends Controller {
             if($user['login']==NULL){
                 header("location:" .BASEURL. "/login" );
             }else{
+                $_SESSION['username'] = $username;
                 foreach($user['login'] as $row ):
                     header("location:" .BASEURL );
                 endforeach; 
@@ -32,5 +41,12 @@ class login extends Controller {
         } 
         
         
+    }
+
+    public function logout() {
+        session_start();
+        session_destroy();
+        header("location:" .BASEURL. "/login" );
+        exit;
     }
 }
