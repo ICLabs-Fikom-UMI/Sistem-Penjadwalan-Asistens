@@ -1,10 +1,10 @@
 <?php
 
-session_start();
+// session_start();
 class login extends Controller {
     public function index() {
         $this->view('template/header');
-        var_dump($_SESSION);
+        // var_dump($_SESSION);
         
         if (isset($_SESSION['username']))
             header("location:" . BASEURL );
