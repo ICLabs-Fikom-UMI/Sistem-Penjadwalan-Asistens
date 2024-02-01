@@ -9,19 +9,21 @@
   
 
 ### Fitur MVP Aplikasi
-- ...
-- ...
-- ...
+- Login
+- Penjadwalan Asisten
+
 
 
 ### Penjelasan Mengenai Arsitektur MVC
-...
-...
-...
+MODEL model digunakan untuk mengelola data di database yang dimana perintah SQL dilakukan disini.
+
+CONTROLLER controller digunakan untuk menjembatani antara MODEL dan VIEW. data yang diterima dari VIEW diteruskan ke MODEL begitupun sebaliknya.
+
+VIEW view merupakan tempat UI nya yang dimana semua tampilan halaman disimpan disini.
 
 
 ### LINK UML [Click here]https://drive.google.com/file/d/1jYy773DSJpN9NNm4c70AUUcFVBtrYIra/view?usp=drive_link
-### LINK ERD [Click here]https://drive.google.com/file/d/1WLgpDuiOlObtg3gJsG2NBGttZZLMm-Mw/view?usp=drive_link
+### LINK ERD [Click here]https://drive.google.com/file/d/13dn3PLAWBATKo1H5aKNmAMwS9kDmz7Rs/view?usp=sharing
 ### LINK UI/UX [Click here]https://drive.google.com/drive/folders/1ozHR-iZOEhaMYTKgK_Oh_G9NODaihRoR?usp=drive_link
 
 
