@@ -16,7 +16,7 @@
     </ul>
   </nav>
 </header>
-<main>
+<main style="width: 100%;">
   <form action="action.php" method="post">
     <table>
     <tr>
