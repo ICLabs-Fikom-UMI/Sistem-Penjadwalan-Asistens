@@ -15,9 +15,11 @@
 
 
 ### Penjelasan Mengenai Arsitektur MVC
-...
-...
-...
+MODEL model digunakan untuk mengelola data di database yang dimana perintah SQL dilakukan disini.
+
+CONTROLLER controller digunakan untuk menjembatani antara MODEL dan VIEW. data yang diterima dari VIEW diteruskan ke MODEL begitupun sebaliknya.
+
+VIEW view merupakan tempat UI nya yang dimana semua tampilan halaman disimpan disini.
 
 
 ### LINK UML [Click here]https://drive.google.com/file/d/1jYy773DSJpN9NNm4c70AUUcFVBtrYIra/view?usp=drive_link
