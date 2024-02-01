@@ -4,17 +4,15 @@
 }
 
 .container {
-  background-image: url("../img/photo1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url("../img/photo1.jpg");
   background-color: #cccccc;
   background-position: center;
-  background-color: black;
-
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Poppins", sans-serif;
 }
 
@@ -30,7 +28,7 @@
 }
 
 .login-body {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ebe8e8;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -38,15 +36,9 @@
   border-radius: 20px 20px 0px 0px;
 }
 
-.card-form form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .login-body form .username {
   width: 100%;
-  padding: 12px 30px;
+  padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -72,7 +64,6 @@
 
 .login-body form .submit {
   background-color: #f1f1f1;
-  /* background-color: #8f5858; */
   color: black;
   font-size: 16px;
   padding: 16px 30px;
@@ -80,7 +71,6 @@
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  margin-left: 25%;
   margin-top: 50px;
 }
 

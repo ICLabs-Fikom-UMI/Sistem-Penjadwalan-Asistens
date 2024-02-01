@@ -20,4 +20,15 @@ class profil extends Controller {
             exit;
         }
     }
+
+    public function tambahProfile() {
+        $tambahData = $this->model('profil_model')->insertProfilAsisten($_POST);
+        var_dump($tambahData);
+        if ($tambahData > 0) {
+            header('Location: ' .BASEURL. '/profil');
+        }
+        else {
+            header('Location: ' .BASEURL. '/profil');
+        }
+    }
 }

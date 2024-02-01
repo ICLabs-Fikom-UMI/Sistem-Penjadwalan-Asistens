@@ -11,7 +11,7 @@
       <li><a href="">Home</a></li>
       <li><a href="<?= BASEURL?>/home">Form Jadwal Kosong</a></li>
       <li><a href="<?= BASEURL?>/profil">profil</a></li>
-      <li><a href="">jadwal asisten</a></li>
+      <li><a href="<?= BASEURL?>/jadwalAsisten">jadwal asisten</a></li>
       <li><a href="<?= BASEURL?>/login/logout">logout</a></li>
     </ul>
   </nav>
