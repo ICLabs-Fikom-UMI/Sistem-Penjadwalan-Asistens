@@ -9,9 +9,9 @@
   
 
 ### Fitur MVP Aplikasi
-- ...
-- ...
-- ...
+- Login
+- Penjadwalan Asisten
+
 
 
 ### Penjelasan Mengenai Arsitektur MVC
