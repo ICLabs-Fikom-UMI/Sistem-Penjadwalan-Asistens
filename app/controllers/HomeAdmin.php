@@ -1,14 +1,14 @@
 <?php
 
-class DataAsisten extends Controller{
+class HomeAdmin extends Controller{
     public function index(){
         if(!isset($_SESSION['username']))
             header("location:" .BASEURL. "/login" );
 
-            $this->view('template/header');
+             $this->view('template/header');
             $this->view('template/sidebarAdmin');
-            $this->view('DataAsisten/index');
+            $this->view('HomeAdmin/index');
            
-
+            
 }
 }

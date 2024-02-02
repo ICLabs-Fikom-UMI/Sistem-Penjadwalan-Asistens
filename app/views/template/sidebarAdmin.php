@@ -1,4 +1,11 @@
 <link rel="stylesheet" href="<?= BASEURL ?>/css/sidebar.css" />
+<style>
+  .sidebar-menu{
+    display:flex;
+    flex-direction: column;
+  }
+</style>
+
 <body?>
   <div class="container-fluid">
     <div class="row">
@@ -11,13 +18,16 @@
             Admin Laboratorium 
           </h5>
           <ul class="sidebar-menu">
-          
           <li>
-            <a href="http://localhost/SIPEMLA/Datamahasiswa"><img src="<?= BASEURL ?>/img/mahasiswa-icon.png" alt="Icon 3" />Data Asisten</a>
+            <a href="<?= BASEURL?>/DataAsisten"><i class="fa-regular fa-file" style="color: #ffffff;"></i> Data Asisten</a>
           </li>
-          
+          <br>
           <li>
-            <a href="http://localhost/SIPEMLA/Pembayaran"><img src="<?= BASEURL ?>/img/matkul-icon.png" alt="Icon 5" />Penjadwalan</a>
+            <a href="<?= BASEURL?>/PenjadwalanAsisten"><i class="fa-regular fa-calendar-days" style="color: #ffffff;"></i> Penjadwalan Asisten</a>
+          </li> 
+          <br>
+          <li>
+            <a href="<?= BASEURL?>/viewJadwal"><i class="fa-regular fa-eye" style="color: #ffffff;"></i> Jadwal Asisten</a>
           </li>
         </ul>
         </div>
