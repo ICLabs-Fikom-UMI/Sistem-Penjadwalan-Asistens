@@ -1,12 +1,15 @@
 <?php
 
 class App {
-    protected $controller = 'Home';
+    protected $controller;
     protected $method = 'index';
     protected $params = [];
 
     public function construct()
     {
+        $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : '';
+        $this->controller = (strtolower($rol) == 'admin') ? 'HomeAdmin' : 'Home';
+
         $url = $this->parseURL();
         
         if (isset($url[0])) {

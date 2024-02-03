@@ -7,10 +7,10 @@ class profil extends Controller {
     {
         if(!isset($_SESSION['username']))
             header("location:" .BASEURL. "/login" );
-
-            $this->view('template/header');
-            $this->view('profil/index');
-            $this->view('template/footer');
+        $this->checkRoleAndRedirect('Asisten', '/HomeAdmin');
+        $this->view('template/header');
+        $this->view('profil/index');
+        $this->view('template/footer');
     }
        
     public function login()

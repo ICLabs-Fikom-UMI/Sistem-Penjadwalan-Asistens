@@ -25,9 +25,13 @@ class login extends Controller {
                 header("location:" .BASEURL. "/login" );
             }else{
                 $_SESSION['username'] = $username;
-                foreach($user['login'] as $row ):
-                    header("location:" .BASEURL );
-                endforeach; 
+                $data= $this->model('Log_model')->getdatabyusername($username);
+
+                $_SESSION['id']= $data['id'];
+
+                $_SESSION['rol'] = $data['rol'];
+
+                header("location:" .BASEURL );
                
             }
 

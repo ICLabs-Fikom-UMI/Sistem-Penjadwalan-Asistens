@@ -30,43 +30,44 @@
  </nav>
     </header> -->
 <main>
-  <form action="action.php" method="post">
+ 
+      <form action="action.php" method="post" class="form-container">
     <table>
-      <tr>
+      <!-- <tr>
         <td>Nama Lengkap</td>
         <td><input type="text" Nama="Nama"</td>
+      </tr> -->
+      <tr>
+        <td><input type="hidden" value="<?= $_SESSION['id']?>"></td>
       </tr>
       <tr>
-        <td>Mata Kuliah</td>
+        <td>Hari</td>
         <td>
-          <select namme="Mata Kuliah">
-            <option value="Pemograman Web">Pemograman Web</option>
-            <option value="Pemograman Web">Pemograman Beriontasi Objek</option>
-            <option value="Pemograman Web">Algoritma Pemograman 1</option>
-            <option value="Pemograman Web">Algoritma Pemograman 2</option>
-            <option value="Pemograman Web">Basis Data 1</option>
-            <option value="Pemograman Web">Basis Data 2</option>
-            <option value="Pemograman Web">
-              Pengantar Teknologi Informasi
-            </option>
-            <option value="Pemograman Web">Jaringan Komputer</option>
-            <option value="Pemograman Web">Micro Controller</option>
-            <option value="Pemograman Web">Pemograman Mobile</option>
-            <option value="Pemograman Web">Elektronika Dasar</option>
-            <option value="Pemograman Web">Akuntansi</option>
-            <option value="Pemograman Web">Multimedia</option>
-          </select>
-        </td>
+          <select namme="Hari">
+            <option value="Senin">Senin</option>
+            <option value="Selasa">Selasa</option>
+            <option value="Rabu">Rabu</option>
+            <option value="Kamis">Kamis</option>
+            <option value="Jum'at">Jum'at</option>
+            <option value="Sabtu">Sabtu</option>
+            
+              
       </tr>
       <tr>
-        <td>Email</td>
-        <td><input type="email"</td>
+        <td>Jam</td>
+        <td>
+          <input type="checkbox" name="Jam" value="08:00-10:00">08:00-10:00
+          <input type="checkbox" name="Jam" value="10:00-12:00">10:00-12:00
+          <input type="checkbox" name="Jam" value="13:00-15:00">13:00-15:00
+          <input type="checkbox" name="Jam" value="16:00-18:00">16:00-18:00  
+      </td>
+
       </tr>
-      <tr>
+      <!-- <tr>
         <td>Jadwal Kosong</td>
         <td><input type="file" name="Jadwal Kosong"</td>
         <br />
-      </tr>
+      </tr> -->
 
       <tr>
         <td colspan="2" align="center" class="button">
