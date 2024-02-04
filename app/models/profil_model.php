@@ -1,6 +1,6 @@
 <?php
 
-class Profil_model extends Database {
+class Profil_model  {
     private $db;
 
     public function __construct() {
@@ -17,4 +17,10 @@ class Profil_model extends Database {
 
     return $this->db->rowCount();
 }
+    public function getAllAsisten() {
+        $query = 'SELECT * FROM asisten ta JOIN users tu ON ta.id=tu.id';
+        $this->db->query($query);
+        return $this->db->resultSet();
+        
+    }
 }
