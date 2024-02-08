@@ -38,6 +38,8 @@
                 <th>Frekuensi</th>
                 <th>Hari</th>
                 <th>Jam</th>
+                <th >action</th>
+
                 </tr>
         </thead>
         <tbody>
@@ -55,6 +57,8 @@
                 <td><?=$frekuensi['kelasfrek'];?></td>
                 <td><?=$frekuensi['hari'];?></td>
                 <td><?=$frekuensi['jam'];?></td>
+                <td><a href="<?= BASEURL ?>/PenjadwalanAsisten/hapusJadwal/<?=$frekuensi['idfrek']?>" onclick="return confirm('yakin?');"><i class="fa-solid fa-trash" style="color: #dd030e;"></i></a></td>
+                <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
                 
                 <!-- <td>$320,800</td> -->
             </tr>

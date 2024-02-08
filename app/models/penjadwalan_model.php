@@ -27,5 +27,11 @@ public function getfrekuensi(){
     $this->db->execute();
 
  }
-
+ 
+ public function hapusPenjadwalan($idfrek){
+    $query ="DELETE FROM frekuensi WHERE idfrek = :idfrek";
+    $this->db->query($query);
+    $this->db->bind('idfrek', $idfrek);
+    $this->db->execute();
+ }
 }

@@ -24,4 +24,14 @@ public function tambahJadwal() {
         header('Location: ' .BASEURL. '/PenjadwalanAsisten');
     }
 }
+public function hapusJadwal($idfrek) {
+    $hapusData = $this->model('Penjadwalan_model')->hapusPenjadwalan($idfrek);
+  
+    if ($hapusData > 0) {
+        header('Location: ' .BASEURL. '/PenjadwalanAsisten');
+    }
+    else {
+        header('Location: ' .BASEURL. '/PenjadwalanAsisten');
+    }
+}
 }
