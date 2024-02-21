@@ -23,4 +23,10 @@ class Profil_model  {
         return $this->db->resultSet();
         
     }
+
+    public function getbyIdAsisten($IdAsisten){
+        $this->db->query('SELECT * FROM asisten WHERE  IdAsisten = :id');
+        $this->db->bind('id', $IdAsisten);
+        return $this->db->single();
+    }
 }

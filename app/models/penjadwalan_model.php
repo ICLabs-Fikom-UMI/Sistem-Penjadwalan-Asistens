@@ -11,8 +11,9 @@ public function getfrekuensi(){
     JOIN asisten ta ON fk.IdAsisten=ta.IdAsisten
     JOIN laboratorium tl ON fk.idlab=tl.idlab
     JOIN matkul tm ON fk.idmatkul=tm.idmatkul
-    JOIN kelas tk ON fk.idkelas=tk.idkelas';
+    JOIN kelas tk ON fk.idkelas=tk.idkelas ';
     $this->db->query($query);
+   //  $this->db->bind('idfrek', $idfrek);
     return $this->db->resultSet();
 }
  public function insertPenjadwalan($data){
@@ -34,4 +35,50 @@ public function getfrekuensi(){
     $this->db->bind('idfrek', $idfrek);
     $this->db->execute();
  }
+
+ public function getFrekuensiById($idfrek){
+
+    $query = "SELECT asisten.Nama, matkul.matkul, laboratorium.namalab, kelas.kelasfrek, frekuensi.hari, frekuensi.jam, frekuensi.asisten
+             FROM frekuensi
+             INNER JOIN asisten ON frekuensi.IdAsisten = asisten.IdAsisten
+             INNER JOIN matkul ON frekuensi.idmatkul = matkul.idmatkul
+             INNER JOIN laboratorium ON frekuensi.idlab = laboratorium.idlab
+             INNER JOIN kelas ON frekuensi.idkelas = kelas.idkelas
+             WHERE frekuensi.idfrek = :id";
+
+   
+
+        $this->db->query($query);
+        $this->db->bind('id', $idfrek);
+        return $this->db->single();
+ }
+
+ public function ubahPenjadwalan($data){
+  $query = "UPDATE frekuensi SET 
+                  asisten = :Asisten,
+                  IdAsisten = :IdAsisten,
+                  idlab = :idlab,
+                  idmatkul = :idmatkul,
+                  idkelas = :idkelas,
+                  hari = :hari,
+                  jam  = :Jam
+                WHERE  id = :idfrek";
+
+   $this->db->bind('asisten', $data['Asisten']);
+   $this->db->bind('IdAsisten', $data['IdAsisten']);
+   $this->db->bind('idlab', $data['idlab']);
+   $this->db->bind('idmatkul', $data['idmatkul']);
+   $this->db->bind('idkelas', $data['idkelas']);
+   $this->db->bind('hari', $data['Hari']);
+   $this->db->bind('jam', $data['Jam']);
+   $this->db->bind('idfrek', $data['idfrek']);
+   $this->db->execute();
+
+}
+
+
+public function getjadwalAsisten($id){
+   
+}
+
 }

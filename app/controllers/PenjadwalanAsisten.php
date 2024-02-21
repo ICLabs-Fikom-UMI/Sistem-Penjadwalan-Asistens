@@ -34,4 +34,46 @@ public function hapusJadwal($idfrek) {
         header('Location: ' .BASEURL. '/PenjadwalanAsisten');
     }
 }
+
+public function ubahJadwal($data1){
+    
+    $data['mhsk'] = $this->model('Penjadwalan_model')->getFrekuensiById($data1);
+    print_r($data);
+    foreach($data['mhsk'] as $value){
+        echo $value["Nama"];
+    }
+    $this->view('template/headerAdmin');
+    $this->view('ubahjadawal/index', $data);
+    $this->view('template/footersidebar');
+}
+
+public function actionEdit(){
+
+
+    $this->index();
+
+}
+
+    public function getubah(){
+        echo json_encode ($this->model('penjadwalan_model')->getFrekuensiById($_POST['idfrek']));
+        
+    }
+
+    public function ubah(){
+var_dump($_POST);
+        // $ubahData = $this->model('Penjadwalan_model')->ubahPenjadwalan($_POST);
+  
+        // if ($ubahData > 0) {
+        //     header('Location: ' .BASEURL. '/PenjadwalanAsisten');
+        // }
+        // else {
+        //     header('Location: ' .BASEURL. '/PenjadwalanAsisten');
+        // }
+    }
+
+    public function getubahAsisten(){
+        $IdAsisten = $_POST['IdAsisten'];
+        $dataAsisten = $this->model ('profil_model')->getbyIdAsisten($IdAsisten);
+        echo json_encode($dataAsisten);
+    }
 }

@@ -9,6 +9,12 @@ class Home extends Controller {
         $this->view('template/header');
         $this->view('home/index');
         $this->view('template/footer');
+
+    }
+
+    public function insertDataForm(){
+        $this->model('form_model')->insertform($_POST);
+        $this->index();
     }
 
     public function login()

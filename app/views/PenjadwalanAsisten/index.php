@@ -23,11 +23,13 @@
 
 <div class="container-fluid mt-5">
   <div class="text-start">
-    <button type="button" class="btn btn-success   w-25" data-bs-toggle="modal" data-bs-target="#penjadwalan">Tambah Jadwal</button>
+    <button type="button" class="btn btn-primary   w-25 tombolJadwal" data-bs-toggle="modal" data-bs-target="#penjadwalan"><i class="fa-solid fa-plus"
+                    style="color: #ffffff;"></i>Tambah Jadwal</button>
   </div>
 </div>
 <br><br>
-<table id="example" class="table table-striped" style="width:100%">
+
+<table class="table table-striped" style="width:100%">
         <thead>
             <tr>
                 <th>No</th>
@@ -58,9 +60,11 @@
                 <td><?=$frekuensi['hari'];?></td>
                 <td><?=$frekuensi['jam'];?></td>
                 <td><a href="<?= BASEURL ?>/PenjadwalanAsisten/hapusJadwal/<?=$frekuensi['idfrek']?>" onclick="return confirm('yakin?');"><i class="fa-solid fa-trash" style="color: #dd030e;"></i></a></td>
-                <td><a href=""><i class="fa-regular fa-pen-to-square"></i></a></td>
-                
-                <!-- <td>$320,800</td> -->
+                <td><a class="tampilubahJadwal" href="<?= BASEURL ?>/PenjadwalanAsisten/ubahJadwal/<?=$frekuensi['idfrek']?>"data-bs-toggle="modal" data-bs-target="#penjadwalan" data-id="<?=$frekuensi['idfrek']; ?>"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                <!-- <td> 
+                  <a href="<?= BASEURL ?>/PenjadwalanAsisten/ubahJadwal/<?=$frekuensi['idfrek']?>" value="edit">Edit</a>
+                </td>  -->
+                <!-- <<td>$320,800</td> --> 
             </tr>
            <?php
            endforeach
@@ -80,18 +84,20 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="penjadwalan">Penjadwalan</h1>
+        <h1 class="modal-title fs-5" id="penjadwalanLabel">Penjadwalan</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="row">
           <div class="d-flex w-100">
             <form action="<?= BASEURL; ?>/PenjadwalanAsisten/tambahJadwal" method="post">
+            <input type="hidden" name="idfrek" id="idfrek">
               <div class="col mb-3">
                 <label for="NamaAsisten" class="form-label">Nama Asisten</label>
                 <select id="asisten" class="form-control" name="IdAsisten">
+                
                   <option value="#">--Pilih Asisten--</option>
-                  <?php foreach ($data['dataAsisten'] as $asisten) : ?>
+                 <?php foreach ($data['dataAsisten'] as $asisten) : ?>
                     <option value="<?= $asisten['IdAsisten']; ?>"><?= $asisten['Nama']; ?></option>
                   <?php endforeach; ?>
                 </select>
@@ -134,7 +140,7 @@
               </div>
               <div>
               <label for="Laboratorium" class="form-label">Laboratorium</label>
-                <select id="praktikum" class="form-control" name="idlab">
+                <select id="lab" class="form-control" name="idlab">
                 <option value="#">--Pilih Laboratorium--</option>
                 <?php foreach ($data['namalab'] as $laboratorium) : ?>
                   <option value="<?= $laboratorium['idlab']; ?>"><?= $laboratorium['namalab']; ?></option>

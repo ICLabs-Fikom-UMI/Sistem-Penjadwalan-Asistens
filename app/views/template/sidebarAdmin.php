@@ -19,15 +19,15 @@
           </h5>
           <ul class="sidebar-menu">
           <li>
-            <a href="<?= BASEURL?>/DataAsisten"><i class="fa-regular fa-file" style="color: #ffffff;"></i> Data Asisten</a>
+            <a href="<?= BASEURL?>/DataAsisten"><i class=" text-decoration-non text-white fa-regular fa-file" style="color: #ffffff;"></i> Data Asisten</a>
           </li>
           <br>
           <li>
-            <a href="<?= BASEURL?>/PenjadwalanAsisten"><i class="fa-regular fa-calendar-days" style="color: #ffffff;"></i> Penjadwalan Asisten</a>
+            <a href="<?= BASEURL?>/PenjadwalanAsisten"><i class="text-decoration-non text-white fa-regular fa-calendar-days" style="color: #ffffff;"></i> Penjadwalan Asisten</a>
           </li> 
           <br>
           <li>
-            <a href="<?= BASEURL?>/viewJadwal"><i class="fa-regular fa-eye" style="color: #ffffff;"></i> Jadwal Asisten</a>
+            <a href="<?= BASEURL?>/viewJadwal"><i class="text-decoration-non text-white fa-regular fa-eye" style="color: #ffffff;"></i> Jadwal Asisten</a>
           </li>
         </ul>
         </div>
