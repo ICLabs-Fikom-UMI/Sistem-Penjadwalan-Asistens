@@ -18,7 +18,44 @@
 </header>
 <main style="width: 100%;">
   <form action="action.php" method="post">
-    <table>
+    <h2>Tampilan Jadwal Asisten</h2>
+    <br><br>
+  <!-- <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Asisten</th>
+                <th>Jabatan</th>
+                <th>Praktikum</th>
+                <th>Laboratorium</th>
+                <th>Frekuensi</th>
+                <th>Hari</th>
+                <th>Jam</th>
+          </tr>
+          </thead>
+          <tbody>
+          <?php
+          $No=0;
+          foreach($data['frekuensi']as $frekuensi):
+            $No++;
+            ?>
+            <tr>
+                <td><?=$No;?></td>
+                <td><?=$frekuensi['Nama'];?></td>
+                <td><?=$frekuensi['asisten'];?></td>
+                <td><?=$frekuensi['matkul'];?></td>
+                <td><?=$frekuensi['namalab'];?></td>
+                <td><?=$frekuensi['kelasfrek'];?></td>
+                <td><?=$frekuensi['hari'];?></td>
+                <td><?=$frekuensi['jam'];?></td>
+                </tr>
+           <?php
+           endforeach
+           ?>
+          </tfoot>
+   
+</table>  -->
+    <!-- <table>
     <tr>
         <td>Prodi</td>
         <td>
@@ -58,6 +95,48 @@
       <td colspan="2" align="center" class="button">
           <input type="submit" value="Submit" id="submit" />
       </tr>
-      </table>
+      </table> -->
   </form>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Asisten</th>
+                <th>Jabatan</th>
+                <th>Praktikum</th>
+                <th>Laboratorium</th>
+                <th>Frekuensi</th>
+                <th>Hari</th>
+                <th>Jam</th>
+          </tr>
+          </thead>
+          <tbody>
+          <?php
+          $No=0;
+          foreach($data['frekuensi']as $frekuensi):
+            $No++;
+            ?>
+            <tr>
+                <td><?=$No;?></td>
+                <td><?=$frekuensi['Nama'];?></td>
+                <td><?=$frekuensi['asisten'];?></td>
+                <td><?=$frekuensi['matkul'];?></td>
+                <td><?=$frekuensi['namalab'];?></td>
+                <td><?=$frekuensi['kelasfrek'];?></td>
+                <td><?=$frekuensi['hari'];?></td>
+                <td><?=$frekuensi['jam'];?></td>
+                </tr>
+           <?php
+           endforeach
+           ?>
+          </tfoot>
+   
+</table> 
+      </div>
+    </div>
+  </div>
 </main>
